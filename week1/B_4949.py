@@ -1,11 +1,14 @@
 import sys
 
-stack =[]
+# stack =[]
+# p = 0
 while True:
+    stack =[]
+    p = 0
     s = sys.stdin.readline().rstrip()
     if s == '.':
         break
-    
+
     for i in s:
         if i == '(' or i == '[':
             stack.append(i)
@@ -13,16 +16,20 @@ while True:
             try:
                 stack.remove('(')
             except:
-                print('no')
+                p += 1
+                break
         elif i == ']':
             try:
                 stack.remove('[')
             except:
-                print('no')    
-    if stack:
+                p += 1
+                break  
+    if p >= 1:
+        print('no')
+    elif bool(stack) == True:
         print('no')
     else:
         print('yes')
 
 
-# except랑 stack이 빈 경우랑 중복으로 출력되는 케이스 있음 -> 수정하기
+# 개수에 대해서만 균형 맞춘 상태라 문자열 균형으로 수정하기!!
