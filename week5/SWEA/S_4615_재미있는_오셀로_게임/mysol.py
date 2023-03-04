@@ -52,17 +52,3 @@ for tc in range(1, T+1):
 
     print(f'#{tc} {b_cnt} {w_cnt}')
 
-
-################
-
-# for k in range(N):
-#     for d in range(8):
-#         nx = x + dx[d] * k
-#         ny = y + dy[d] * k
-#
-#         if 0 <= nx < N and 0 <= ny < N and arr[nx][ny] == c:
-#             for i in range(x, nx+1):
-#                 for j in range(y, ny+1):
-#                     if arr[i][j] != 0 and arr[i][j] != c:
-#                         arr[i][j] = c
-#                         break
