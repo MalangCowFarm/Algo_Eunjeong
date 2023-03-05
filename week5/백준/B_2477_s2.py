@@ -21,7 +21,7 @@ for i in range(6):
 
 for i in range(6):
     if i % 2:
-        if lst[(i-1) % 6][1] + lst[(i+1) % 6][1] == big_h:          ## (i+-1) % 6 !!!
+        if lst[(i-1) % 6][1] + lst[(i+1) % 6][1] == big_h:
             small_w = lst[i][1]
     else:
         if lst[(i-1) % 6][1] + lst[(i+1) % 6][1] == big_w:

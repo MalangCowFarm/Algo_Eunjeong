@@ -14,9 +14,5 @@ for i in student:
         result += j // K
         if j % K:
             result += 1
-        # if j % K == 0:
-        #     result += (j // K)
-        # else:
-        #     result += ((j // K) + 1)
 
 print(result)
