@@ -4,8 +4,6 @@ from heapq import heappop, heappush
 
 N = int(input())
 M = int(input())
-# bus = [list(map(int, input().split())) for _ in range(M)]
-# s, e = map(int, input().split())
 
 line = [[] for _ in range(N+1)]  # 노드 인덱스에 대한 도착노드, 비용 저장할 리스트
 visited = [int(1e9)] * (N+1)     # 노드별 최소비용 저장
@@ -32,10 +30,3 @@ def sol(n):
 sol((start, 0))     # 시작 노드, 시작 비용(0)
 print(visited[end])
 
-
-    # if c > visited[n]:
-    #     continue
-    # for i in line[n]:
-    #     end, cost = i[0], i[1]
-    #     if i[1] < visited[end]:
-    #         visited[end] = i[1]

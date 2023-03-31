@@ -19,29 +19,23 @@ for i in range(N):
 def sol(n):
     global result
     if len(lst) == M:
-        # print(lst)
         tmp_sum = 0
         for h in house:
             tmp = 50 * 50
             for c in lst:
-            # for h in house:
                 distance = abs(h[0] - c[0]) + abs(h[1] - c[1])
                 if distance < tmp:
                     tmp = distance
             tmp_sum += tmp
-        # print(tmp_sum)
         if tmp_sum < result:
             result = tmp_sum
         return
 
     else:
         for i in range(n, len(chicken)):
-            # if not visited[i]:
             lst.append(chicken[i])
-            # visited[i] = True
             sol(i+1)
             lst.pop()
-            # visited[i] = False
 
 sol(0)
 print(result)

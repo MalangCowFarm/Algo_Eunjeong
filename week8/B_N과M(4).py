@@ -2,7 +2,6 @@ N, M = map(int, input().split())
 lst = []
 
 def sol(n):
-    # lst.append(n)
     if len(lst) == M:
         print(*lst)
         return
