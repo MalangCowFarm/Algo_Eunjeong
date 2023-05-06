@@ -36,6 +36,9 @@ def bfs(green_lst, red_lst):
 
     while gq and rq:
         for i in range(len(gq)):
+        # 시간에 따라서 gq에서 pop해서 이동시키고 그 다음 rq에 대해 진행
+        # 그 다음에 시간 tmp 추가해서
+        # while gq:
             gx, gy = gq.popleft()
             # 꽃 핀 곳이면 continue
             if visited[gx][gy] == int(1e9):
@@ -53,6 +56,7 @@ def bfs(green_lst, red_lst):
                     gq.append((nx, ny))
 
         for j in range(len(rq)):
+        # while rq:
             rx, ry = rq.popleft()
             if visited[rx][ry] == int(1e9):
                 continue
